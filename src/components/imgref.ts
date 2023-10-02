@@ -5,6 +5,8 @@ import githublogo from "../assets/images/githublogo.svg"
 import twitterlogo from "../assets/images/twitterlogo.svg"
 import discordlogo from "../assets/images/telegramlogo.svg"
 import telegramlogo from "../assets/images/discordlogo.svg"
+import polygonshape from "../assets/images/polygonshape.svg"
+import underlineapparently from "../assets/images/underlineapparently.svg"
 
 
 export default {
@@ -14,5 +16,7 @@ nbtcbnw,
 githublogo,
 twitterlogo,
 discordlogo,
-telegramlogo
+telegramlogo,
+polygonshape,
+underlineapparently,
 }
