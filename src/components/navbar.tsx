@@ -4,7 +4,7 @@ import imgref from "./imgref";
 import Link from "next/link";
 
 const navElements = [
-  { name: "Why nBTC?", href: "/" },
+  { name: "Why nBTC?", href: "/why" },
   { name: "nBTC", href: "/" },
   { name: "Whitepaper", href: "/" },
   { name: "Community", href: "/" },
