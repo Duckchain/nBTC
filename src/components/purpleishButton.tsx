@@ -6,7 +6,7 @@ type PurpleishButtonProps = {
 
 function PurpleishButton({ children }: PurpleishButtonProps) {
   return (
-    <button className=" font-normal text-base text-white px-[25px] py-[8px] bg-gradient-to-b from-[#601E75] to-[#2A0536] whitespace-nowrap">
+    <button className="tablet:w-fit w-full font-normal text-base text-white px-[25px] py-[8px] bg-gradient-to-b from-[#601E75] to-[#2A0536] whitespace-nowrap">
       {children}
     </button>
   );
