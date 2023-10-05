@@ -10,7 +10,7 @@ type HalfSubProps = {
 
 function HalfSub({ buttonContent, description, title, additionalClasses}: HalfSubProps) {
   return (
-    <div className={` w-[50%] ${additionalClasses} `}>
+    <div className={` tablet:w-[50%] ${additionalClasses} `}>
       <h1 className=" font-bold text-[40px] leading-[45.96px] text-[#611F76]">
         {title}
       </h1>
