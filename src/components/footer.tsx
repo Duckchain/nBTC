@@ -11,7 +11,7 @@ const navElements = [
 
 function Footer() {
   return (
-    <footer className=" px-[5%] ipad:px-[18px] py-[2.5%] ipad:py-[35.72px] flex flex-col tablet:flex-row items-center justify-center tablet:justify-between w-full gap-[1rem] tablet:gap-0 ">
+    <footer className=" px-[5%] ipad:px-[18px] py-[2.5%] ipad:py-[35.72px] flex flex-col tablet:flex-row items-center justify-center tablet:justify-between w-full pt-[1rem] tablet:pt-0 gap-[2rem] tablet:gap-0 ">
       <Image
         src={imgref.nbtcbnw}
         alt="nBTC logo"
