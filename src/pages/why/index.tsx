@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import Layout from "../../components/layout"; 
 import Image from "next/image";
 import imgref from "@/components/imgref";
+import PurpleishButton2 from "@/components/purpleishButton2";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,6 +43,26 @@ const why = () => {
           </div>
         </div>
       </section>
+
+      <div className="bg-[#1E1E1E] mt-[52px] mb-[58px] flex flex-col px-[2.5%]">
+        <h1 className="text-[white] font-normal text-[30px] leading-[57.45px] flex flex-col items-center gap-[11px] mt-[58px]">
+            Get a quick overview for
+        </h1>
+        <div className="justify-center mt-8 flex flex-col   md:flex-row lg:flex-row  md:space-x-4 lg:space-x-8">
+          <PurpleishButton2  
+            line1Text="Individuals" 
+            line2Text="Learn more" 
+          />
+          <PurpleishButton2  
+            line1Text="Businesses" 
+            line2Text="Learn more" 
+          />
+          <PurpleishButton2  
+            line1Text="Developers" 
+            line2Text="Learn more" 
+          />
+        </div>
+      </div>
     </div>
     </Layout>
   );
