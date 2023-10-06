@@ -3,10 +3,47 @@ import Layout from "../../components/layout";
 import Image from "next/image";
 import imgref from "@/components/imgref";
 import PurpleishButton2 from "@/components/purpleishButton2";
+import Card from "@/components/Card";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
-const why = () => {
+const why: React.FC = () => {
+  const cardData = [
+    {
+      id: 1,
+      image: 'software.svg',
+      title: 'Software Development',
+      description: 'Creating diverse software types, including smart contracts,dApps, subnets, APIs, utilities, upgrades, bridges, and wallet software. We also support others in these endeavors.',
+    },
+    {
+      id: 2,
+      image: 'image2.jpg',
+      title: 'Node Operation',
+      description: 'Staking tokens and managing nodes/validators to ensure blockchain networks integrity and security.',
+    },
+    {
+      id: 3,
+      image: 'image2.jpg',
+      title: 'Content Creation',
+      description: 'Producing written, video, and other content disseminated across websites, social media platforms, and more.',
+    }, {
+      id: 4,
+      image: 'image2.jpg',
+      title: 'Community Support',
+      description: 'Serving as a resource for the community in numerous capacities.',
+    }, {
+      id: 5,
+      image: 'image2.jpg',
+      title: 'Nonprofit Status and Revenue Generation',
+      description: 'The nBTC Foundation operates as a nonprofit organization. While some activities may generate revenue or investment returns, these funds are reinvested in the nBTC community and used to compensate our service providers.',
+    }, {
+      id: 6,
+      image: 'image2.jpg',
+      title: 'Token Transactions and Activities',
+      description: 'We, along with our associates, engage in transactions involving nBTC tokens and other cryptoassets associated with the nBTC public blockchain. These transactions may encompass private sales, open market exchanges, DeFi protocols, and other means. Some transactions may involve preferential pricing based on volume.',
+    },
+  ];
     return (
     <Layout>
       <div className="lg:mt-8 ">
@@ -67,17 +104,29 @@ const why = () => {
         </div>
 
         <section className="mt-[52px] mb-[58px] flex flex-col px-[2.5%]">
-            <header className="text-center mx-auto mb-6 lg:px-20">
-              <h2 className="center-justify-text font-normal text-[30px] leading-[57.45px] flex flex-col items-center gap-[11px] mt-[58px]">
-                Whether utilized for personal or business objectives, nBTC tokens provide numerous
-                advantages as the foremost stable, easily tradable, and highly reliable.
-              </h2>
-            </header>
+          <header className="text-center mx-auto mb-6 lg:px-20">
+            <h2 className="center-justify-text font-normal text-[30px] leading-[57.45px] flex flex-col items-center gap-[11px] mt-[58px]">
+              Whether utilized for personal or business objectives, nBTC tokens provide numerous
+              advantages as the foremost stable, easily tradable, and highly reliable.
+            </h2>
+          </header>
+
+      <div className="card-container">
+        <section className="">
+          {cardData.map((card) => (
+            <Card
+              key={card.id}
+              id={card.id}
+              title={card.title}
+              image={card.image}
+              description={card.description}
+            />
+          ))}
         </section>
+      </div>
+        
 
-
-
-   
+        </section>
       </div>
     </Layout>
   );

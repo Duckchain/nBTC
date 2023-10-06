@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/lato": "^5.0.14",
     "@fontsource/ubuntu": "^5.0.8",
     "next": "^13.5.4",
     "react": "latest",

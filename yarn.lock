@@ -7,6 +7,11 @@
   resolved "https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
+"@fontsource/lato@^5.0.14":
+  version "5.0.14"
+  resolved "https://registry.npmjs.org/@fontsource/lato/-/lato-5.0.14.tgz"
+  integrity sha512-LVygmrEjoxlBPBcp5QMaH5fZ+aAIMR2h2Q3K4W2DETh1kphEjn/bBwiZEhg3ZFPIMu5A34lOVZygKq4HOVY8iQ==
+
 "@fontsource/ubuntu@^5.0.8":
   version "5.0.8"
   resolved "https://registry.npmjs.org/@fontsource/ubuntu/-/ubuntu-5.0.8.tgz"
