@@ -24,11 +24,13 @@ function Navbar() {
         openModal ? "fixed" : "relative"
       }`}
     >
-      <Image
-        src={imgref.nbtclogo}
-        alt="nBTC logo"
-        className=" tablet:w-[132px] tablet:h-[32.56px] w-[66px] h-[16.26]"
-      />
+      <Link href="/">
+        <Image
+          src={imgref.nbtclogo}
+          alt="nBTC logo"
+          className=" tablet:w-[132px] tablet:h-[32.56px] w-[66px] h-[16.26]"
+        />
+      </Link>
 
       <ul className="hidden ipad:flex text-white gap-[63px]">
         {navElements.map((navElement, index) => (
@@ -82,7 +84,7 @@ function Navbar() {
           {navElements.map((navElement, index) => (
             <Link href={navElement.href}>
               <li
-              onClick={handleOpenModal}
+                onClick={handleOpenModal}
                 key={index}
                 className={`${
                   index === navElements.length - 2 ? "text-[#6DA800]" : ""
