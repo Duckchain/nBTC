@@ -8,12 +8,12 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ id, title, image, description }) => {
-  const imagePath = `/assets/images/${image}`;
+  const imagePath = `images/${image}`;
 
   return (
-    <div className="card">
+    <div className="card max-w-[545px] w-full">
       <img src={imagePath} alt={title} />
-      <h2 className='header'>{title}</h2>
+      <h2 className="header">{title}</h2>
       <p>{description}</p>
     </div>
   );
