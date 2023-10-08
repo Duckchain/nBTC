@@ -4,6 +4,7 @@ import Image from "next/image";
 import imgref from "@/components/imgref";
 import PurpleishButton2 from "@/components/purpleishButton2";
 import Card from "@/components/Card";
+import GetQuickOV from "@/components/getquickoverview";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -89,31 +90,7 @@ const why: React.FC = () => {
               </div>
             </div>
           </section>
-
-          <div className="bg-[#1E1E1E] mt-[52px] mb-[58px] flex flex-col px-[2.5%]">
-            <section>
-              <h1 className="text-[white] font-normal text-[30px] leading-[57.45px] flex flex-col items-center gap-[11px] mt-[58px]">
-                Get a quick overview for
-              </h1>
-              <div className="justify-center mt-8 flex flex-col   md:flex-row lg:flex-row  md:space-x-4 lg:space-x-8">
-                <PurpleishButton2
-                  line1Text="Individuals"
-                  line2Text="Learn more"
-                  where="/why/individual"
-                />
-                <PurpleishButton2
-                  line1Text="Businesses"
-                  line2Text="Learn more"
-                  where="/why/business"
-                />
-                <PurpleishButton2
-                  line1Text="Developers"
-                  line2Text="Learn more"
-                  where=""
-                />
-              </div>
-            </section>
-          </div>
+                <GetQuickOV ShowBiz ShowDev ShowIndi/>
 
           <section className="mt-[52px] mb-[58px] flex flex-col px-[2.5%]">
             <header className="text-center mx-auto mb-6 lg:px-20">
