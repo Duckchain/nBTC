@@ -5,23 +5,28 @@ import PurpleishButton2 from "@/components/purpleishButton2";
 import WhiteCard from "@/components/whitecard";
 import Image from "next/image";
 
-function Individual() {
+function Business() {
   const WhitecardArr = [
     {
-      header: "Easily accessible",
+      header: "Low fees, Ultra efficiency",
       description:
-        "Utilize nBTC tokens across multiple blockchains. Explore the ecosystem developed around nBTC.",
+        "The network fee for a typical nBTC transaction is nominal, often less than a penny. Converting nBTC into fiat currency incurs costs significantly lower than credit card processing.",
     },
     {
-      header: "Quick transfer",
+      header: "No chargebacks, Guaranteed Security",
       description:
-        "Swift global transfers without concerns about traditional banking's sluggish processing.",
+        "nBTC transactions provide inherent fraud protection. Unlike credit cards, there are no surprise voids, refunds, or chargebacks, ensuring a seamless experience for merchants",
     },
     {
-      header: "Low fees",
+      header: "Attract new customers",
       description:
-        "Transfer varying amounts affordably using Tether tokens, whether small or substantial.",
+        "A growing number of patrons prefer nBTC as a payment method. Merchants who offer this option tend to draw in more customers actively seeking out businesses that accept nBTC",
     },
+    // {
+    //   header: "Free marketing and Press coverage",
+    //   description:
+    //     "By accepting nBTC, merchants gain exposure through free listings in directories, expanding their customer base. Additionally, embracing this trend can generate positive press and publicity for their business.",
+    // },
   ];
 
   return (
@@ -29,7 +34,7 @@ function Individual() {
       <section className=" flex flex-col tablet:flex-row min-h-screen px-[2.5%] justify-center tablet:justify-between tablet:items-center">
         <div className=" tablet:w-[60%] flex flex-col gap-10">
           <h1 className="font-bold text-[50px] tablet:text-[64px] leading-[60px] tablet:leading-[73.54px] text-transparent bg-clip-text bg-gradient-to-b from-[#5C1D70] to-[#2F073C]">
-            nBTC <span className=" font-normal"> for Individuals</span>
+            nBTC <span className=" font-normal"> for Businesses</span>
           </h1>
           <PurpleishButton>
             <h2 className="text-left font-medium text-xl">
@@ -54,12 +59,12 @@ function Individual() {
 
       <section className="mt-[10vh] flex flex-col gap-[25px] min-h-screen px-[2.5%] items-center text-center">
         <h2 className=" text-[#611F76] font-bold text-3xl">
-          Benefits for Individuals
+          Benefits for Businesses
         </h2>
         <p className=" text-[#1E1E1E] font-normal text-2xl">
           nBTC tokens offer a range of valuable advantages.
         </p>
-        <div className=" mt-[25px] mb-[80px] flex flex-col tablet:flex-row justify-between tablet:w-full gap-4 tablet:gap-0">
+        <div className=" mt-[25px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 w-full place-items-center gap-4">
           {WhitecardArr.map((things, index) => (
             <WhiteCard
               key={index}
@@ -68,22 +73,32 @@ function Individual() {
             />
           ))}
         </div>
-        <PurpleishButton children={"Get Started with nBTC"} />
+        <WhiteCard
+          header="Free marketing and Press coverage"
+          description="By accepting nBTC, merchants gain exposure through free listings in directories, expanding their customer base. Additionally, embracing this trend can generate positive press and publicity for their business."
+        />
+        <div className="mt-[80px]">
+          <PurpleishButton children={"Get Started with nBTC"} />
+        </div>
       </section>
 
       <section className=" mt-[10vh] bg-[#1E1E1E] text-white text-center py-[58px] flex flex-col justify-center items-center gap-[52px]">
         <h1 className=" font-bold text-3xl">Get a quick overview for</h1>
         <div className=" tablet:flex justify-between w-full max-w-[830px]">
           <PurpleishButton2
-            line1Text="Businesses"
+            line1Text="Individuals"
             line2Text="Learn more"
-            where="/why/business"
+            where="/why/individual"
           />
-          <PurpleishButton2 line1Text="Developers" line2Text="Learn more"  where=""/>
+          <PurpleishButton2
+            line1Text="Developers"
+            line2Text="Learn more"
+            where=""
+          />
         </div>
       </section>
     </Layout>
   );
 }
 
-export default Individual;
+export default Business;
