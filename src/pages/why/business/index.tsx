@@ -1,3 +1,4 @@
+import GetQuickOV from "@/components/getquickoverview";
 import imgref from "@/components/imgref";
 import Layout from "@/components/layout";
 import PurpleishButton from "@/components/purpleishButton";
@@ -81,22 +82,7 @@ function Business() {
           <PurpleishButton children={"Get Started with nBTC"} />
         </div>
       </section>
-
-      <section className=" mt-[10vh] bg-[#1E1E1E] text-white text-center py-[58px] flex flex-col justify-center items-center gap-[52px]">
-        <h1 className=" font-bold text-3xl">Get a quick overview for</h1>
-        <div className=" tablet:flex justify-between w-full max-w-[830px]">
-          <PurpleishButton2
-            line1Text="Individuals"
-            line2Text="Learn more"
-            where="/why/individual"
-          />
-          <PurpleishButton2
-            line1Text="Developers"
-            line2Text="Learn more"
-            where=""
-          />
-        </div>
-      </section>
+          <GetQuickOV ShowDev ShowIndi />
     </Layout>
   );
 }

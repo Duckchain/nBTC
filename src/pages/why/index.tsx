@@ -4,6 +4,7 @@ import Image from "next/image";
 import imgref from "@/components/imgref";
 import PurpleishButton2 from "@/components/purpleishButton2";
 import Card from "@/components/Card";
+import GetQuickOV from "@/components/getquickoverview";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,36 +13,45 @@ const why: React.FC = () => {
   const cardData = [
     {
       id: 1,
-      image: 'software.svg',
-      title: 'Software Development',
-      description: 'Creating diverse software types, including smart contracts,dApps, subnets, APIs, utilities, upgrades, bridges, and wallet software. We also support others in these endeavors.',
+      image: "software.svg",
+      title: "Software Development",
+      description:
+        "Creating diverse software types, including smart contracts,dApps, subnets, APIs, utilities, upgrades, bridges, and wallet software. We also support others in these endeavors.",
     },
     {
       id: 2,
-      image: 'image2.jpg',
-      title: 'Node Operation',
-      description: 'Staking tokens and managing nodes/validators to ensure blockchain networks integrity and security.',
+      image: "nodeops.svg",
+      title: "Node Operation",
+      description:
+        "Staking tokens and managing nodes/validators to ensure blockchain networks integrity and security.",
     },
     {
       id: 3,
-      image: 'image2.jpg',
-      title: 'Content Creation',
-      description: 'Producing written, video, and other content disseminated across websites, social media platforms, and more.',
-    }, {
+      image: "content.svg",
+      title: "Content Creation",
+      description:
+        "Producing written, video, and other content disseminated across websites, social media platforms, and more.",
+    },
+    {
       id: 4,
-      image: 'image2.jpg',
-      title: 'Community Support',
-      description: 'Serving as a resource for the community in numerous capacities.',
-    }, {
+      image: "community.svg",
+      title: "Community Support",
+      description:
+        "Serving as a resource for the community in numerous capacities.",
+    },
+    {
       id: 5,
-      image: 'image2.jpg',
-      title: 'Nonprofit Status and Revenue Generation',
-      description: 'The nBTC Foundation operates as a nonprofit organization. While some activities may generate revenue or investment returns, these funds are reinvested in the nBTC community and used to compensate our service providers.',
-    }, {
+      image: "nonprofit.svg",
+      title: "Nonprofit Status and Revenue Generation",
+      description:
+        "The nBTC Foundation operates as a nonprofit organization. While some activities may generate revenue or investment returns, these funds are reinvested in the nBTC community and used to compensate our service providers.",
+    },
+    {
       id: 6,
-      image: 'image2.jpg',
-      title: 'Token Transactions and Activities',
-      description: 'We, along with our associates, engage in transactions involving nBTC tokens and other cryptoassets associated with the nBTC public blockchain. These transactions may encompass private sales, open market exchanges, DeFi protocols, and other means. Some transactions may involve preferential pricing based on volume.',
+      image: "tokentransactions.svg",
+      title: "Token Transactions and Activities",
+      description:
+        "We, along with our associates, engage in transactions involving nBTC tokens and other cryptoassets associated with the nBTC public blockchain. These transactions may encompass private sales, open market exchanges, DeFi protocols, and other means. Some transactions may involve preferential pricing based on volume.",
     },
   ];
     return (
@@ -80,31 +90,7 @@ const why: React.FC = () => {
               </div>
             </div>
           </section>
-
-          <div className="bg-[#1E1E1E] mt-[52px] mb-[58px] flex flex-col px-[2.5%]">
-            <section>
-              <h1 className="text-[white] font-normal text-[30px] leading-[57.45px] flex flex-col items-center gap-[11px] mt-[58px]">
-                Get a quick overview for
-              </h1>
-              <div className="justify-center mt-8 flex flex-col   md:flex-row lg:flex-row  md:space-x-4 lg:space-x-8">
-                <PurpleishButton2
-                  line1Text="Individuals"
-                  line2Text="Learn more"
-                  where="/why/individual"
-                />
-                <PurpleishButton2
-                  line1Text="Businesses"
-                  line2Text="Learn more"
-                  where="/why/business"
-                />
-                <PurpleishButton2
-                  line1Text="Developers"
-                  line2Text="Learn more"
-                  where=""
-                />
-              </div>
-            </section>
-          </div>
+                <GetQuickOV ShowBiz ShowDev ShowIndi/>
 
           <section className="mt-[52px] mb-[58px] flex flex-col px-[2.5%]">
             <header className="text-center mx-auto mb-6 lg:px-20">
@@ -115,8 +101,8 @@ const why: React.FC = () => {
               </h2>
             </header>
 
-            <div className="card-container">
-              <section className="">
+            {/* <div className="card-container"> */}
+              <section className=" grid grid-cols-1 tablet:grid-cols-2 place-items-center">
                 {cardData.map((card) => (
                   <Card
                     key={card.id}
@@ -127,7 +113,7 @@ const why: React.FC = () => {
                   />
                 ))}
               </section>
-            </div>
+            {/* </div> */}
           </section>
         </div>
       </Layout>
