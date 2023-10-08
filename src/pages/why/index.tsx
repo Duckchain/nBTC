@@ -90,6 +90,7 @@ const why: React.FC = () => {
               <PurpleishButton2  
                 line1Text="Individuals" 
                 line2Text="Learn more" 
+                where="/why/individual"
               />
               <PurpleishButton2  
                 line1Text="Businesses" 
