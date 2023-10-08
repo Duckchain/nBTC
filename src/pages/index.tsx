@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <Layout>
-      <section className=" flex flex-col tablet:flex-row min-h-screen px-[2.5%] justify-center tablet:justify-normal tablet:items-center">
+      <section className=" flex flex-col tablet:flex-row min-h-screen px-[2.5%] justify-center tablet:justify-between tablet:items-center">
         <div className=" tablet:w-[60%]">
           <h1 className=" font-bold  text-transparent bg-clip-text bg-gradient-to-b from-[#5C1D70] to-[#2F073C] ">
             <span className="text-[50px] tablet:text-[64px] leading-[60px] tablet:leading-[73.54px]">
@@ -36,7 +36,11 @@ export default function Home() {
         </div>
 
         <aside>
-          <Image src={imgref.polygonshape} alt="nBTC logo" className=" hidden tablet:inline-block" />
+          <Image
+            src={imgref.polygonshape}
+            alt="nBTC logo"
+            className=" hidden tablet:inline-block"
+          />
         </aside>
       </section>
       <div className=" mt-20 flex flex-col mb-[200px] gap-[200px] px-[2.5%]">
