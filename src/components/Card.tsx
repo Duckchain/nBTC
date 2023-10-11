@@ -11,10 +11,10 @@ const Card: React.FC<CardProps> = ({ id, title, image, description }) => {
   const imagePath = `images/${image}`;
 
   return (
-    <div className="card max-w-[545px] w-full">
+    <div className="card max-w-[545px] w-full ">
       <img src={imagePath} alt={title} />
-      <h2 className="header">{title}</h2>
-      <p>{description}</p>
+      <h2 className="text-[#611F76] font-medium text-xl">{title}</h2>
+      <p className='mt-[23px]'>{description}</p>
     </div>
   );
 };

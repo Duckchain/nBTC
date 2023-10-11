@@ -102,16 +102,24 @@ const why: React.FC = () => {
             </header>
 
             {/* <div className="card-container"> */}
-              <section className=" grid grid-cols-1 tablet:grid-cols-2 place-items-center">
-                {cardData.map((card) => (
-                  <Card
-                    key={card.id}
-                    id={card.id}
-                    title={card.title}
-                    image={card.image}
-                    description={card.description}
-                  />
-                ))}
+              <section className="flex flex-col min-h-screen px-[2.5%] items-center">
+                <div className="grid grid-cols-1 p-[15px] tablet:grid-cols-2 gap-[25px]">
+                  {cardData.map((card) => (
+                    <Card
+                      key={card.id}
+                      id={card.id}
+                      title={card.title}
+                      image={card.image}
+                      description={card.description}
+                    />
+                   ))}
+                </div>
+                <Card
+                  id={7}
+                  image="legal.svg"
+                  title="Legal Disclaimer"
+                  description="nBTC Foundation provides no explicit or implied representations, warranties, or guarantees regarding the nBTC public blockchain or any of our Software, Content, and Activities. We are not liable for any actions, proceedings, claims, damages, expenses, or liabilities arising from the use or interaction with our offerings."
+                />
               </section>
             {/* </div> */}
           </section>
