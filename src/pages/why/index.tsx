@@ -53,6 +53,13 @@ const why: React.FC = () => {
       description:
         "We, along with our associates, engage in transactions involving nBTC tokens and other cryptoassets associated with the nBTC public blockchain. These transactions may encompass private sales, open market exchanges, DeFi protocols, and other means. Some transactions may involve preferential pricing based on volume.",
     },
+    {
+      id: 7,
+      image: "legal.svg",
+      title: "Legal Disclaimer",
+      description:
+        "nBTC Foundation provides no explicit or implied representations, warranties, or guarantees regarding the nBTC public blockchain or any of our Software, Content, and Activities. We are not liable for any actions, proceedings, claims, damages, expenses, or liabilities arising from the use or interaction with our offerings.",
+    },
   ];
     return (
       <Layout>
