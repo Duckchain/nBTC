@@ -23,11 +23,11 @@ function Business() {
       description:
         "A growing number of patrons prefer nBTC as a payment method. Merchants who offer this option tend to draw in more customers actively seeking out businesses that accept nBTC",
     },
-    // {
-    //   header: "Free marketing and Press coverage",
-    //   description:
-    //     "By accepting nBTC, merchants gain exposure through free listings in directories, expanding their customer base. Additionally, embracing this trend can generate positive press and publicity for their business.",
-    // },
+    {
+      header: "Free marketing and Press coverage",
+      description:
+        "By accepting nBTC, merchants gain exposure through free listings in directories, expanding their customer base. Additionally, embracing this trend can generate positive press and publicity for their business.",
+    },
   ];
 
   return (
@@ -65,7 +65,7 @@ function Business() {
         <p className=" text-[#1E1E1E] font-normal text-2xl">
           nBTC tokens offer a range of valuable advantages.
         </p>
-        <div className=" mt-[25px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 w-full place-items-center gap-4">
+        <div className=" mt-[25px] mx-auto flex flex-wrap justify-center items-center gap-8">
           {WhitecardArr.map((things, index) => (
             <WhiteCard
               key={index}
@@ -74,15 +74,11 @@ function Business() {
             />
           ))}
         </div>
-        <WhiteCard
-          header="Free marketing and Press coverage"
-          description="By accepting nBTC, merchants gain exposure through free listings in directories, expanding their customer base. Additionally, embracing this trend can generate positive press and publicity for their business."
-        />
         <div className="mt-[80px]">
           <PurpleishButton children={"Get Started with nBTC"} />
         </div>
       </section>
-          <GetQuickOV ShowDev ShowIndi />
+      <GetQuickOV ShowDev ShowIndi />
     </Layout>
   );
 }

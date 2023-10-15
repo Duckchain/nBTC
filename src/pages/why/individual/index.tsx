@@ -60,7 +60,7 @@ function Individual() {
         <p className=" text-[#1E1E1E] font-normal text-2xl">
           nBTC tokens offer a range of valuable advantages.
         </p>
-        <div className=" mt-[25px] mb-[80px] flex flex-col tablet:flex-row justify-between tablet:w-full gap-4 tablet:gap-0">
+        <div className=" mt-[25px] mx-auto flex flex-wrap justify-center items-center gap-8">
           {WhitecardArr.map((things, index) => (
             <WhiteCard
               key={index}
@@ -69,9 +69,11 @@ function Individual() {
             />
           ))}
         </div>
+        <div className="mt-[80px]">
         <PurpleishButton children={"Get Started with nBTC"} />
+        </div>
       </section>
-          <GetQuickOV ShowBiz ShowDev />
+      <GetQuickOV ShowBiz ShowDev />
     </Layout>
   );
 }
