@@ -6,8 +6,8 @@ import Link from "next/link";
 const navElements = [
   { name: "Why nBTC?", href: "/why" },
   { name: "nBTC", href: "/" },
-  { name: "Whitepaper", href: "/" },
-  { name: "Community", href: "/" },
+  { name: "Whitepaper", href: "https://gitinfo.gitbook.io/_nbtc/" },
+  { name: "Community", href: "https://t.me/nBTC_TG" },
   { name: "ENG", href: "/" },
 ];
 
@@ -34,7 +34,12 @@ function Navbar() {
 
       <ul className="hidden ipad:flex text-white gap-[63px]">
         {navElements.map((navElement, index) => (
-          <Link href={navElement.href}>
+          <Link
+            href={navElement.href}
+            target={
+              navElement.name === "Community" ? "_blank" : navElement.name === "Whitepaper" ? "_blank" : ""
+            }
+          >
             <li
               key={index}
               className={`${
