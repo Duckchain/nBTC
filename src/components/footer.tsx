@@ -4,13 +4,13 @@ import imgref from "./imgref";
 import Link from "next/link";
 
 const navElements = [
-  { logo: imgref.githublogo, linkto: "" },
+  { logo: imgref.githublogo, linkto: "https://gitinfo.gitbook.io/_nbtc/" },
   {
     logo: imgref.twitterlogo,
-    linkto: "https://x.com/_nBTC?t=L0HDDC54VOLmoFBbp6HNtg&s=09",
+    linkto: "https://x.com/_nBTC",
   },
   { logo: imgref.telegramlogo, linkto: "https://t.me/nBTC_TG" },
-  { logo: imgref.discordlogo, linkto: "" },
+  { logo: imgref.discordlogo, linkto: "https://linktr.ee/_nbtc" },
 ];
 
 function Footer() {
