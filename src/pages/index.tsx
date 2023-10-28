@@ -7,12 +7,16 @@ import imgref from "@/components/imgref";
 import HalfSub from "@/components/halfSub";
 import BenefitBoysArr from "@/components/benefitarr";
 import HalfSubArr from "@/components/halfsubarr";
-
+import Head from 'next/head';
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <Layout>
+      <Head>
+        <title>nBTC | The Future of Digital
+          Currency</title>
+      </Head>
       <section className=" flex flex-col tablet:flex-row min-h-screen px-[2.5%] justify-center tablet:justify-between tablet:items-center">
         <div className=" tablet:w-[60%]">
           <h1 className=" font-bold  text-transparent bg-clip-text bg-gradient-to-b from-[#5C1D70] to-[#2F073C] ">
@@ -68,9 +72,8 @@ export default function Home() {
         {BenefitBoysArr.map((content, index) => (
           <div
             key={index}
-            className={`${
-              index === BenefitBoysArr.length - 1 ? "mb-0" : "mb-[23px]"
-            } mt-[54px] px-[5%] tablet:px-0 flex flex-col gap-[23px] items-center text-center max-w-[862px]`}
+            className={`${index === BenefitBoysArr.length - 1 ? "mb-0" : "mb-[23px]"
+              } mt-[54px] px-[5%] tablet:px-0 flex flex-col gap-[23px] items-center text-center max-w-[862px]`}
           >
             <h2 className=" font-bold text-3xl">{content.title}</h2>
             <p className=" font-light text-xl">{content.description}</p>
