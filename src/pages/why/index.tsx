@@ -53,6 +53,13 @@ const why: React.FC = () => {
       description:
         "We, along with our associates, engage in transactions involving nBTC tokens and other cryptoassets associated with the nBTC public blockchain. These transactions may encompass private sales, open market exchanges, DeFi protocols, and other means. Some transactions may involve preferential pricing based on volume.",
     },
+    {
+      id: 7,
+      image: "legal.svg",
+      title: "Legal Disclaimer",
+      description:
+        "nBTC Foundation provides no explicit or implied representations, warranties, or guarantees regarding the nBTC public blockchain or any of our Software, Content, and Activities. We are not liable for any actions, proceedings, claims, damages, expenses, or liabilities arising from the use or interaction with our offerings.",
+    },
   ];
     return (
       <Layout>
@@ -90,7 +97,7 @@ const why: React.FC = () => {
               </div>
             </div>
           </section>
-                <GetQuickOV ShowBiz ShowDev ShowIndi/>
+          <GetQuickOV ShowBiz ShowDev ShowIndi />
 
           <section className="mt-[52px] mb-[58px] flex flex-col px-[2.5%]">
             <header className="text-center mx-auto mb-6 lg:px-20">
@@ -102,25 +109,20 @@ const why: React.FC = () => {
             </header>
 
             {/* <div className="card-container"> */}
-              <section className="flex flex-col min-h-screen px-[2.5%] items-center">
-                <div className="grid grid-cols-1 p-[15px] tablet:grid-cols-2 gap-[25px]">
-                  {cardData.map((card) => (
-                    <Card
-                      key={card.id}
-                      id={card.id}
-                      title={card.title}
-                      image={card.image}
-                      description={card.description}
-                    />
-                   ))}
-                </div>
-                <Card
-                  id={7}
-                  image="legal.svg"
-                  title="Legal Disclaimer"
-                  description="nBTC Foundation provides no explicit or implied representations, warranties, or guarantees regarding the nBTC public blockchain or any of our Software, Content, and Activities. We are not liable for any actions, proceedings, claims, damages, expenses, or liabilities arising from the use or interaction with our offerings."
-                />
-              </section>
+            <section className="flex flex-col min-h-screen px-[2.5%] items-center">
+              {/* <div className="grid grid-cols-1 p-[15px] tablet:grid-cols-2 gap-[25px]"> */}
+              <div className=" mt-[25px] mx-auto flex flex-wrap justify-center items-center gap-8">
+                {cardData.map((card) => (
+                  <Card
+                    key={card.id}
+                    id={card.id}
+                    title={card.title}
+                    image={card.image}
+                    description={card.description}
+                  />
+                ))}
+              </div>
+            </section>
             {/* </div> */}
           </section>
         </div>

@@ -22,6 +22,11 @@ function Business() {
       description:
         "Payments made more accessible by allowing utilize the fastest growing payment token nBtc .",
     },
+    {
+      header: "Free marketing and Press coverage",
+      description:
+        "Very soon developers will be able to write smart contract on nbtc chain to drive Defi applications.",
+    },
   ];
 
   return (
@@ -48,7 +53,7 @@ function Business() {
         <p className=" text-[#1E1E1E] font-normal text-2xl">
           Learn nBTC and start building nBTC- based application.
         </p>
-        <div className=" mt-[25px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 w-full place-items-center gap-4">
+        <div className=" mt-[25px] mx-auto flex flex-wrap justify-center items-center gap-8">
           {WhitecardArr.map((things, index) => (
             <WhiteCard
               key={index}
@@ -58,16 +63,11 @@ function Business() {
             />
           ))}
         </div>
-        <WhiteCard
-          header="Free marketing and Press coverage"
-          hideTitle={true}
-          description="Very soon developers will be able to write smart contract on nbtc chain to drive Defi applications."
-        />
         <div className="mt-[80px]">
           <PurpleishButton children={"Get Started with nBTC"} />
         </div>
       </section>
-          <GetQuickOV ShowIndi ShowBiz />
+      <GetQuickOV ShowIndi ShowBiz />
     </Layout>
   );
 }

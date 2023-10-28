@@ -37,7 +37,7 @@ function GetQuickOV({ ShowIndi, ShowBiz, ShowDev }: GetQuickOVProps) {
           <PurpleishButton2
             line1Text="Developers"
             line2Text="Learn more"
-            where=""
+            where="/why/developers"
             show={ShowDev ? true : false}
           />
         </div>

@@ -4,10 +4,13 @@ import imgref from "./imgref";
 import Link from "next/link";
 
 const navElements = [
-  imgref.githublogo,
-  imgref.twitterlogo,
-  imgref.telegramlogo,
-  imgref.discordlogo,
+  { logo: imgref.githublogo, linkto: "https://gitinfo.gitbook.io/_nbtc/" },
+  {
+    logo: imgref.twitterlogo,
+    linkto: "https://x.com/_nBTC",
+  },
+  { logo: imgref.telegramlogo, linkto: "https://t.me/nBTC_TG" },
+  { logo: imgref.discordlogo, linkto: "https://linktr.ee/_nbtc" },
 ];
 
 function Footer() {
@@ -23,13 +26,15 @@ function Footer() {
 
       <div className=" flex text-white gap-[63px]">
         {navElements.map((navElement, index) => (
-          <Image
-            key={index}
-            src={navElement}
-            alt="translation icon"
-            width={20}
-            height={20}
-          />
+          <a href={navElement.linkto} target="_blank">
+            <Image
+              key={index}
+              src={navElement.logo}
+              alt="translation icon"
+              width={20}
+              height={20}
+            />
+          </a>
         ))}
       </div>
     </footer>
