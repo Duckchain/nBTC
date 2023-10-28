@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cryption/dapp-factory-sdk": "^0.6.10",
     "@fontsource/lato": "^5.0.14",
     "@fontsource/ubuntu": "^5.0.8",
     "framer-motion": "^10.16.4",
